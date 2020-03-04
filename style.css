@@ -1,0 +1,131 @@
+body{
+    font-size: large;
+}
+.phoneWrapper{
+    height: 100%;
+    width: 21.5%;
+    min-width:270px;
+    max-width:300px;
+    position:relative;
+    top:11.3vh;
+    left:4.7%;
+    max-width: 100%;
+background-size:cover;
+}
+
+
+
+header .topPanel{
+    display: flex;
+    background-color: rgb(38, 0, 255);
+    color: white;
+}
+header .topPanel .topRightPanel{
+    width: 80%;
+}
+header .topPanel .topleftPanel{
+    display: flex;
+}
+.topleftPanel i {
+    padding: 0 5px 5px 5px;
+}
+.contactsHeader{
+    background-color: #4a09e0;
+    color: white;
+    display: flex;
+}
+.contactsHeader h2{
+    width: 90%;
+    margin: 1%;
+}
+.mainContacts #contactsno{
+    color: rgb(71, 70, 70);
+}
+.mainContacts #contactsPanel{
+    display: flex;
+}
+.mainContacts  table{
+    text-align:center;
+    width:100%;
+}
+.mainContacts table td,th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.mainContacts .form-popup {
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    top: 1%;
+    
+    }
+
+.mainContacts .form-popup input[type=text],input[type=number]{
+        width: 75%;
+        padding: 10px;
+        position: relative;
+        left: 5%;
+        margin: 0px 0 2px 0;
+        border: none;
+        background:transparent;
+        outline: none;
+     border-bottom: solid black;
+        }
+        /* When the inputs get focus, do something */
+.mainContacts .form-popup input[type=text]:focus, input[type=number]:focus {
+        outline: none;
+        border-bottom: solid #4a09e0;
+        }
+.mainContacts #deleteForm button{
+    background-color: #4a09e0;
+}
+.mainContacts #deleteForm input{
+    width: 50%;
+} 
+#deleteForm h2{
+    margin: 0;
+}
+#addContacts{
+    background-color: #4a09e0;
+    border-radius: 50%;
+    color: white;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+}
+#deleteContacts{
+    background-color: #4a09e0;
+    border-radius: 50%;
+    color: white;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+   
+}
+#deleteContacts i {
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+i{
+    padding: 2%;
+}
+#addContacts i{
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+button{
+    background: transparent;
+    outline: none;
+    color: white;
+}
+
+ footer{
+            position: fixed;
+            bottom: 11vh;
+            display: flex;
+        }
+      
