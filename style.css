@@ -1,14 +1,16 @@
 body{
-    font-size: large;
+    overflow:none;
 }
 .phoneWrapper{
+    transition:ease-in 500ms;
+    display:none;
     height: 100%;
-    width: 21.5%;
+    width: 21.0%;
     min-width:270px;
     max-width:300px;
     position:relative;
-    top:11.3vh;
-    left:4.7%;
+    top:11.0vh;
+    left:4.5%;
     max-width: 100%;
 background-size:cover;
 }
@@ -125,7 +127,7 @@ button{
 
  footer{
             position: fixed;
-            bottom: 11vh;
+            bottom: 12vh;
             display: flex;
         }
-      
+    

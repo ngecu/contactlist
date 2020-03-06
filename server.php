@@ -3,8 +3,6 @@ $db = mysqli_connect('localhost', 'root', '', 'phone');
 
 if (isset($_POST['submit'])) {
   
-
-
     $contactName =  $_POST['contactName'];
   $contactPhone = $_POST['contactPhone'];
 
@@ -14,6 +12,8 @@ mysqli_query($db, $query);
 #echo '<p style="color:red;argin:0;">' .$contactName.' Added successful ';
 
 }
+
+
 if (isset($_POST['deleteContact'])) {
   $contactName = $_POST['Name'];
 
