@@ -130,14 +130,7 @@
 </footer>
 </div>
     </div>
-    <div id="button" style="position:absolute;top:20%;left:10%;color:black;pointer:cursor;width:90px;height:110px;display:flex;flex-direction:column;" onclick="how()">
-    <img src="vlcsnap-2020-03-04-17h30m41s447.png" style="width:70%;border-radius:50%;"/>
-    Dev Ngecu
 
-     </div>
-    <div class="side" style="position: absolute;width: 40%;height: 90%;top: 10%;left: 50%;padding-left: 1%;">
-      
-    
 </body>
 <script>
     function startTime() {
@@ -172,65 +165,7 @@ function closeDeleteForm(){
     document.getElementById("deleteForm").style.display="none";
     document.getElementById("popupAddContactForm").style.display="block";
 }
-function how() {
-    document.querySelector('.phoneWrapper').style.display = "block";
-    document.querySelector('#button').style.display = "none";
-}
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 700;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
 </script>
 </html>
